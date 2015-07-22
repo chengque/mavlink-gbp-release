@@ -1,0 +1,4 @@
+git clone https://github.com/mavlink/mavlink-gbp-release.git -b debian/indigo/trusty/mavlink
+cd mavlink-gpb-release
+sed 's|\(2015.7.11-3vivid\)|\1-custom|' -i debian/changelog
+fakeroot dpkg-buildpackage -us -uc -b
